@@ -1,0 +1,11 @@
+[Unit]
+Description=Change the efl configures.
+After=enlightenment-user.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/efl_config
+EnvironmentFile=-/run/tizen-system-env
+
+[Install]
+WantedBy=default.target

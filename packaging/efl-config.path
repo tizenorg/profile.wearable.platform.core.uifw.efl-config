@@ -1,0 +1,5 @@
+[Unit]
+Description=EFL Configuration Daemon
+
+[Path]
+PathExists=/run/.wm_ready
