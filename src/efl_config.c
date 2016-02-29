@@ -32,7 +32,9 @@ int main(int argc, char **argv)
 
 	_scale_set();
 
-	elm_run();
+//  This program will end after setting the scale value.
+//  If it should stay alive, remove this comment.
+//	elm_run();
 
 	elm_shutdown();
 
