@@ -24,19 +24,19 @@ _scale_set(void)
 
 int main(int argc, char **argv)
 {
-	Evas_Object *win;
+   Evas_Object *win;
 
-	elm_init(argc, argv);
+   elm_init(argc, argv);
 
-	win = elm_win_add(NULL, "config", ELM_WIN_BASIC);
+   win = elm_win_add(NULL, "config", ELM_WIN_BASIC);
 
-	_scale_set();
+   _scale_set();
 
-//  This program will end after setting the scale value.
-//  If it should stay alive, remove this comment.
-//	elm_run();
+   //  This program will end after setting the scale value.
+   //  If it should stay alive, remove this comment.
+   //  elm_run();
 
-	elm_shutdown();
+   elm_shutdown();
 
-	return EINA_TRUE;
+   return EINA_TRUE;
 }
