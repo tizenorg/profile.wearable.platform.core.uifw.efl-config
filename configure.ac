@@ -22,8 +22,9 @@ PKG_CHECK_MODULES([ECOREWAYLAND],[ecore-wayland])
 
 AC_SUBST([DESKTOP])
 AC_DEFINE_UNQUOTED([DESKTOP],[${DESKTOP}],["Desktop build is enabled"])
-
+AC_SUBST(TZ_SYS_BIN)
 AC_CONFIG_FILES([Makefile
             src/Makefile
+            packaging/efl-config.service
             ])
 AC_OUTPUT

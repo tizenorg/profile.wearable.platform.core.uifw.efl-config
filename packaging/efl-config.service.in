@@ -4,7 +4,7 @@ After=enlightenment-user.service
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/efl_config
+ExecStart=@TZ_SYS_BIN@/efl_config
 EnvironmentFile=-/run/tizen-system-env
 
 [Install]

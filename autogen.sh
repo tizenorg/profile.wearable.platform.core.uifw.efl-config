@@ -1,4 +1,4 @@
-export BIN_PATH=/usr/
+#!/bin/sh
+
 libtoolize
 autoreconf -ivf
-./configure --prefix ${BIN_PATH}
