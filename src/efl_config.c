@@ -24,11 +24,9 @@ _scale_set(void)
 
 int main(int argc, char **argv)
 {
-   Evas_Object *win;
-
    elm_init(argc, argv);
 
-   win = elm_win_add(NULL, "config", ELM_WIN_BASIC);
+   elm_win_add(NULL, "config", ELM_WIN_BASIC);
 
    _scale_set();
 
