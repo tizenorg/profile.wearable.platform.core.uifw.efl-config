@@ -4,7 +4,7 @@
 static void
 _scale_set(void)
 {
-   float scale = 0.0, profile_factor = 1.0;
+   float scale = 0.0, saved_scale = 0.0, profile_factor = 1.0;
    int dpi;
    char *s = NULL;
 
@@ -14,12 +14,14 @@ _scale_set(void)
    profile_factor = 0.4;
 
    scale = floor((double)dpi * profile_factor / 90.0 * 10 + 0.5) / 10;
+   saved_scale = elm_config_scale_get();
 
-   s = getenv("ELM_SCALE");
-   if (!s) elm_config_scale_set(scale);
-
-   elm_config_save();
-   elm_config_all_flush();
+   if (scale != saved_scale && !getenv("ELM_SCALE"))
+     {
+        elm_config_scale_set(scale);
+        elm_config_save();
+        elm_config_all_flush();
+     }
 }
 
 int main(int argc, char **argv)
