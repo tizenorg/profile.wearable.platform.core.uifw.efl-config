@@ -6,7 +6,6 @@ _scale_set(void)
 {
    float scale = 0.0, saved_scale = 0.0, profile_factor = 1.0;
    int dpi;
-   char *s = NULL;
 
    ecore_wl_sync();
    dpi = ecore_wl_dpi_get();
